@@ -1,0 +1,63 @@
+@import url(./button.css);
+
+body {
+  background-color: #26b4bc;
+  font-family: arial, helvetica, sans-serif;
+}
+
+.wrapper {
+  /* border: 4px solid blue; */
+  max-inline-size: 900px;
+  margin: auto;
+}
+.player {
+  margin-block-start: 100px;
+  /* border: 4px solid red; */
+  position: relative;
+}
+.player video {
+  inline-size: 100%;
+  aspect-ratio: 16/9;
+  vertical-align: middle;
+  object-fit: cover;
+}
+
+.player-title {
+  color: white;
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 20px;
+}
+
+.player-actions {
+  position: absolute;
+  inset-block-start: 50px;
+  /* border: 5px solid pink; */
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+/*vamos dar estilo al player-progress*/
+.player-progress {
+  position: absolute;
+  inset-block-end: 0;
+  inset-inline: 0;
+  display: flex;
+  padding: 10px;
+}
+.player-progress input {
+  flex: 1;
+}
+/* Ahora vamos a ocultar los buttons y el h2 */
+
+.player-overlay {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: 0.3s opacity;
+}
+.player:hover .player-overlay {
+  opacity: 1;
+}
